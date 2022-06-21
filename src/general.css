@@ -1,0 +1,23 @@
+.flex{
+    display: flex;
+}
+
+.col{
+    flex-direction: column;
+}
+
+.w-full{
+    width: 100%;
+}
+
+.h-full{
+    height: 100%;
+}
+
+.rounded-50{
+    border-radius: 50%;
+}
+
+.items-center{
+    align-items: center;
+}
