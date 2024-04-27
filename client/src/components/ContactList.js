@@ -1,12 +1,16 @@
 import React from "react";
 import Contact from "./Contact";
+import { contactList } from "../mock-data";
 
-const ContactList = () => {
+const ContactList = ({setChat}) => {
   return (
     <div className="contact-container h-full w-full flex col">
-      <div className="profile flex">
+      {/* profile picture */}
+      <div className="header flex">
         <img className="rounded-50 image" src="/image/p2.jpeg" alt="pp" />
       </div>
+
+      {/* search bar */}
       <div className="flex search">
         <div className="flex w-full search-container">
           <img
@@ -21,7 +25,9 @@ const ContactList = () => {
           />
         </div>
       </div>
-      <Contact />
+
+      {/* list */}
+      {contactList.map(user => <Contact user={user} setChat={setChat} key={user.id} />)}
     </div>
   );
 };
