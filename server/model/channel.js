@@ -7,9 +7,10 @@ const channelSchema = new Schema({
         profilePic: {type: String, default: ""}
     }],
     messages: [{
-        sender: {type: String, default: ""},
+        senderPhone: {type: String, default: "", length: 10},
         messageType: {type: String, default: ""},
-        text: {type: String, default: ""}
+        text: {type: String, default: ""},
+        addedOn: {type: Number, default: Date.now()}
     }],
     addedOn: {type: Number, default: Date.now()}
 });
